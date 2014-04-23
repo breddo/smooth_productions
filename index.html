@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="js/scriptPrincipal.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+		<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+
+	<title>Smooth Productions</title>
+	</head>
+	<body>
+		<div id="contenido">
+			<header>
+				<hgroup>
+					<h1>Smooth Productions</h1>
+				</hgroup>	
+				<nav>
+					<ul>
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="contacto.html">Contácto</a></li>
+						<li><a href="media.html">Media</a></li>
+					</ul>	
+				</nav>
+			</header>
+				<section>
+					<aside>
+							<p>Siguenos en <br><a href="https://www.facebook.com/smooth.life.hard" target="_blank"><img src="images/facebook_icon.png" width="50%" <img></a></p>
+							<p><a href="https://twitter.com/mbreddo" class="twitter-follow-button" data-show-count="false" data-lang="es" data-size="large" data-show-screen-name="false">Seguir a @mbreddo</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+					</aside>
+						<div id="textoPr">
+							<hgroup>
+								<h1>Bienvenidos!</h1>
+							</hgroup>
+							<div class="container">
+								<div class="wrapper">
+
+									<ul id="sb-slider" class="sb-slider">
+										<li>
+											<a href="http://www.flickr.com/photos/strupler/2969141180" target="_blank"><img src="images/imagen1.jpg" alt="image1"/></a>
+											
+										</li>
+										<li>
+											<a href="http://www.flickr.com/photos/strupler/2968268187" target="_blank"><img src="images/imagen2.jpg" alt="image2"/></a>
+											
+										</li>
+										<li>
+											<a href="http://www.flickr.com/photos/strupler/2968114825" target="_blank"><img src="images/imagen3.jpg" alt="image1"/></a>
+											
+										</li>
+										<li>
+											<a href="http://www.flickr.com/photos/strupler/2968122059" target="_blank"><img src="images/imagen4.jpg" alt="image1"/></a>
+											
+										</li>
+										<li>
+											<a href="http://www.flickr.com/photos/strupler/2969119944" target="_blank"><img src="images/imagen5.jpg" alt="image1"/></a>
+											
+										</li>
+										<li>
+											<a href="http://www.flickr.com/photos/strupler/2968126177" target="_blank"><img src="images/imagen6.jpg" alt="image1"/></a>
+											
+										</li>
+									</ul>
+
+									<div id="shadow" class="shadow"></div>
+
+									<div id="nav-arrows" class="nav-arrows">
+										<a href="#">Next</a>
+										<a href="#">Previous</a>
+									</div>
+								</div><!-- /wrapper -->
+							</div>
+								<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+								<script type="text/javascript" src="js/jquery.slicebox.js"></script>
+								<script type="text/javascript">
+									$(function() {
+
+										var Page = (function() {
+
+											var $navArrows = $( '#nav-arrows' ).hide(),
+												$navDots = $( '#nav-dots' ).hide(),
+												$nav = $navDots.children( 'span' ),
+												$shadow = $( '#shadow' ).hide(),
+												slicebox = $( '#sb-slider' ).slicebox( {
+													onReady : function() {
+
+														$navArrows.show();
+														$navDots.show();
+														$shadow.show();
+
+													},
+													onBeforeChange : function( pos ) {
+
+														$nav.removeClass( 'nav-dot-current' );
+														$nav.eq( pos ).addClass( 'nav-dot-current' );
+
+													}
+												} ),
+												
+												init = function() {
+
+													initEvents();
+													
+												},
+												initEvents = function() {
+
+													// add navigation events
+													$navArrows.children( ':first' ).on( 'click', function() {
+
+														slicebox.next();
+														return false;
+
+													} );
+
+													$navArrows.children( ':last' ).on( 'click', function() {
+														
+														slicebox.previous();
+														return false;
+
+													} );
+
+													$nav.each( function( i ) {
+													
+														$( this ).on( 'click', function( event ) {
+															
+															var $dot = $( this );
+															
+															if( !slicebox.isActive() ) {
+
+																$nav.removeClass( 'nav-dot-current' );
+																$dot.addClass( 'nav-dot-current' );
+															
+															}
+															
+															slicebox.jump( i + 1 );
+															return false;
+														
+														} );
+														
+													} );
+
+												};
+
+												return { init : init };
+
+										})();
+
+										Page.init();
+
+									});
+								</script>
+							<p>Somos Smooth Productions!</p>
+							<p>Un grupo técnico especializado. Nos encargamos de trabajar para conseguir óptimos resultados en materia de publicidad y edición.</br>
+								Contámos con las mejores herramientas de, grabación y software de audio digital.
+							<p>Si necesitas realizar un corte publicitario, voz "en off" o simplemente queres editar, mezclar multimedia contactános! Tenemos el mejor presupuesto para vos!</p>
+						</div>					
+				</section>
+			
+		</div>
+		<footer>
+			<canvas id="miCanvas">
+			</canvas>
+			<div id="copyright">
+				®2013 Todos los derechos reservados Smooth Productions.
+			</div>
+		</footer>
+	</body>
+</html>

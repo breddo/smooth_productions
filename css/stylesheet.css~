@@ -1,0 +1,137 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'neuropol';
+  font-style: normal;
+  font-weight: 400;
+  src: local('neuropol'), local('neuropol'), url(../fonts/neuropol.ttf) format('truetype');
+ }
+  @font-face {
+  font-family: 'Coalitionv2';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Coalitionv2'), local('Coalitionv2'), url(../fonts/Coalitionv2.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'SocialLogos';
+  font-style: normal;
+  font-weight: 400;
+  src: local('SocialLogos'), local('SocialLogos'), url(../fonts/SocialLogos.ttf) format('truetype');
+}
+body
+{
+	background-color: #FFF;
+	font-family: 'Open Sans', cursive;
+	font-size: 20px;
+}
+#contenido
+{
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+}
+h1
+{
+	color: #5FD68A;
+}
+header hgroup h1
+{
+	font-size: 50px;
+	color: #1d1d1d;
+	text-shadow: 1px 3px 5px rgba(95, 255, 127, 1);
+	border-bottom: solid;
+	padding-bottom: 10px;
+	border-width: 2px;
+	border-color: #B026C2;
+	font-family: 'Coalitionv2', Open Sans;
+}
+body section hgroup h1
+{
+	font-family: 'neuropol', Open Sans;
+}
+nav ul li
+{
+	font-family: 'Coalitionv2', Open Sans;
+	display: inline-block;
+	margin-right: 20px;
+	color: #FF0000;
+	cursor: pointer;
+	font-size: 25px;
+	padding: 5px;
+	transition: all 0.5s linear;
+	webkit-transition: all 0.5s linear;
+	moz-transition: all 0.5s linear;
+	o-transition: all 0.5s linear;
+}
+nav ul li:hover
+{
+	background-color: #ECC6F5;
+	color: #e44e2d;
+	border-radius: 5px;
+}
+nav ul li a
+{
+	text-decoration: none;
+}
+#textoPr
+{
+	width: 600px;
+	height: 100%;
+	background-color: #1d1d1d;
+	color: #fff;
+	margin: 0 auto;
+	text-align: left;
+	border-radius: 20px;
+	padding: 20px;
+	box-shadow: 0px 0px 20px rgba(95, 255, 127, 1);
+}
+a
+{
+	color: #1d1d1d;
+	font-weight: bold;
+}
+aside p a
+{
+	color: #5FD68A;
+	font-family: 'SocialLogos';
+	font-size: 40px;
+	text-decoration: none;
+}
+#miCanvas
+{
+	position: static;
+	bottom:0px;
+	left:0px;
+}
+meter
+{
+	background-color: #FFF;
+	padding: 5px;
+	color: #e44e2d;
+	margin-left: 20px;
+	width: 400px;
+}
+label
+{
+	display: block;
+}
+#btnSubmit
+{
+	border: none;
+	background-color: #FFF;
+	color: #e44e2d;
+	padding:4px;
+	margin: 20px;
+	cursor: pointer;
+}
+#copyright
+{
+	padding: 20px;
+	text-align: center;
+	color: #1d1d1d;
+	text-shadow: 10px 10px 30px rgba(95, 255, 127, 1);
+}
